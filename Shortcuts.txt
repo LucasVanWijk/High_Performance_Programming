@@ -1,0 +1,12 @@
+Save                        = Ctrl+S
+Edit mode                   = ESC
+Command mode                = Enter
+Add block abvove            = A
+Add block below             = B
+Move up                     = J
+Move down =                 = K
+Run cell                    = Ctrl+Enter
+Runn cell and insert cell   = Shift+Enter
+Delete                      = dd
+Change to Markdown          = M
+Change to code              = Y
