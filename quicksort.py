@@ -7,10 +7,9 @@ def quick_sort(listToSort):
         return listToSort
     else:    
         pivot = listToSort[0]
-        great, small = partition(listToSort[1:], pivot)
+        greater, smaller = partition(listToSort[1:], pivot)
         
-        # recurse on the arrays with the pivot in between
-        return quick_sort(small) + [pivot] + quick_sort(great)
+        return quick_sort(smaller) + [pivot] + quick_sort(greater)
         
 
 def partition(listToPartition, pivot):
@@ -32,7 +31,7 @@ def personal_timer(sort_algorime,list_of_list_to_sort):
       start = time.perf_counter()
       sort_algorime(current_list)
       end = time.perf_counter()
-      list_with_times.append(f"{end - start :0.4f}")
+      list_with_times.append(f"{end - start :0.5f}")
 
    return list_with_times
 
@@ -40,8 +39,8 @@ print(quick_sort(numpy.random.randint(low=0, high=100, size=100)))
 
 random_duizend        = numpy.random.rand(1000)
 random_tienduizend    = numpy.random.rand(10000)
-random_dertigduizend  = numpy.random.rand(30000)
+random_dertigduizend  = numpy.random.rand(100000)
 
 list_of_list = [random_duizend,random_tienduizend,random_dertigduizend]
 times_list = personal_timer(quick_sort,list_of_list)
-print("Sorted 1000 in {} seconds \nSorted 10000 in {} seconds\nSorted 3000 in {} seconds".format(times_list[0],times_list[1],times_list[2]))
+print("Sorted 1000 in {} seconds \nSorted 10000 in {} seconds\nSorted 100000 in {} seconds".format(times_list[0],times_list[1],times_list[2]))
